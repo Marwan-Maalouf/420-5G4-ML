@@ -1,0 +1,3 @@
+# .gitignore
+# Ignore large dsv and ubyte files
+/apprentissage/data/analyse_images/*
