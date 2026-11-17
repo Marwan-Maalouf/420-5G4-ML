@@ -4,7 +4,9 @@
 	"name": "C++",
 	"build": {
 		"dockerfile": "Dockerfile"
-	}
+		
+	},
+	"runArgs": ["--add-host=host.docker.internal:host-gateway"]
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
