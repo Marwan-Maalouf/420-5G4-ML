@@ -156,13 +156,13 @@ agent/
 
 ### Étape 4 — Ajouter `bindings.cpp` et la cible pybind11
 
-- [ ] Créer `agent/bindings.cpp` avec `PYBIND11_MODULE`.
-- [ ] Exposer `Book`, `User`, `Library` et `FileManager` selon la liste ci-dessus.
-- [ ] Ajouter `find_package(Python COMPONENTS Interpreter Development REQUIRED)`.
-- [ ] Ajouter `find_package(pybind11 CONFIG REQUIRED)`.
-- [ ] Lier le module à `bibliotheque_core`, pas à `main.cpp`.
-- [ ] Définir le répertoire de sortie `agent/build/python`.
-- [ ] Documenter `Python_EXECUTABLE` et `pybind11_DIR` issus du `.venv`.
+- [x] Créer `agent/bindings.cpp` avec `PYBIND11_MODULE`.
+- [x] Exposer `Book`, `User`, `Library` et `FileManager` selon la liste ci-dessus.
+- [x] Ajouter `find_package(Python COMPONENTS Interpreter Development REQUIRED)`.
+- [x] Ajouter `find_package(pybind11 CONFIG REQUIRED)`.
+- [x] Lier le module à `bibliotheque_core`, pas à `main.cpp`.
+- [x] Définir le répertoire de sortie `agent/build/python`.
+- [x] Documenter `Python_EXECUTABLE` et `pybind11_DIR` issus du `.venv`.
 
 **Test** : configurer avec `BUILD_PYTHON_BINDINGS=ON` et vérifier la présence du `.so`.
 
@@ -181,15 +181,15 @@ agent/
 
 ### Étape 6 — Créer la couche de service Python
 
-- [ ] Ajouter `agent/gui/service.py` avec `LibraryService`.
-- [ ] Faire posséder `Library` et `FileManager` par le service.
-- [ ] Résoudre `books.txt` et `users.txt` à partir du dossier de données.
-- [ ] Gérer le chargement initial, la sauvegarde et les erreurs.
-- [ ] Valider les champs vides, les doublons et les ISBN.
-- [ ] Convertir les booléens C++ en messages ou exceptions françaises.
-- [ ] Ne pas dépendre des messages `stdout` du C++.
-- [ ] Recalculer les statistiques après chaque mutation.
-- [ ] Prévoir la recréation complète du service lors d’un changement de dossier.
+- [x] Ajouter `agent/gui/service.py` avec `LibraryService`.
+- [x] Faire posséder `Library` et `FileManager` par le service.
+- [x] Résoudre `books.txt` et `users.txt` à partir du dossier de données.
+- [x] Gérer le chargement initial, la sauvegarde et les erreurs.
+- [x] Valider les champs vides, les doublons et les ISBN.
+- [x] Convertir les booléens C++ en messages ou exceptions françaises.
+- [x] Ne pas dépendre des messages `stdout` du C++.
+- [x] Recalculer les statistiques après chaque mutation.
+- [x] Prévoir la recréation complète du service lors d’un changement de dossier.
 
 **Test** : tests unitaires du service sur un dossier temporaire, sans interface graphique.
 
