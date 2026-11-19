@@ -195,15 +195,15 @@ agent/
 
 ### Étape 7 — Créer le shell CustomTkinter
 
-- [ ] Ajouter `agent/gui/main.py` et `agent/gui/app.py`.
-- [ ] Ajouter `__init__.py` aux packages nécessaires.
-- [ ] Ajouter la navigation latérale et la zone de contenu.
-- [ ] Ajouter une barre de statut pour les succès et erreurs.
-- [ ] Accepter `--data-dir`.
-- [ ] Charger les données au démarrage.
-- [ ] Intercepter la fermeture de fenêtre pour sauvegarder.
-- [ ] Afficher un état « modifications non sauvegardées ».
-- [ ] Décider si les mutations sont auto-sauvegardées ou seulement à la fermeture.
+- [x] Ajouter `agent/gui/main.py` et `agent/gui/app.py`.
+- [x] Ajouter `__init__.py` aux packages nécessaires.
+- [x] Ajouter la navigation latérale et la zone de contenu.
+- [x] Ajouter une barre de statut pour les succès et erreurs.
+- [x] Accepter `--data-dir`.
+- [x] Charger les données au démarrage.
+- [x] Intercepter la fermeture de fenêtre pour sauvegarder.
+- [x] Afficher un état « modifications non sauvegardées ».
+- [x] Décider si les mutations sont auto-sauvegardées ou seulement à la fermeture.
 
 **Test** : lancer la fenêtre, naviguer entre les pages, fermer et vérifier la sauvegarde.
 
