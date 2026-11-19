@@ -113,13 +113,13 @@ agent/
 
 ### Étape 0 — Préparer l’environnement
 
-- [ ] Installer `python3-tk`.
-- [ ] Installer `pybind11` et `customtkinter` dans `.venv`.
-- [ ] Ajouter `agent/gui/requirements.txt` avec les versions de `customtkinter` et `pybind11`.
-- [ ] Mettre à jour `agent/.devcontainer/Dockerfile` pour inclure `customtkinter`.
-- [ ] Ajouter les exclusions Python au `.gitignore` (`__pycache__`, `*.pyc`).
-- [ ] Utiliser explicitement `.venv/bin/python` pour le build et les tests.
-- [ ] Vérifier `DISPLAY` et l’accès X11 via `agent/.devcontainer`.
+- [x] Installer `python3-tk`.
+- [x] Installer `pybind11` et `customtkinter` dans `.venv`.
+- [x] Ajouter `agent/gui/requirements.txt` avec les versions de `customtkinter` et `pybind11`.
+- [x] Mettre à jour `agent/.devcontainer/Dockerfile` pour inclure `customtkinter`.
+- [x] Ajouter les exclusions Python au `.gitignore` (`__pycache__`, `*.pyc`).
+- [x] Utiliser explicitement `.venv/bin/python` pour le build et les tests.
+- [x] Vérifier `DISPLAY` et l’accès X11 via `agent/.devcontainer`.
 
 **Test** : imports réussis de `tkinter`, `customtkinter`, `pybind11`, puis build CLI actuel.
 
