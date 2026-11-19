@@ -134,11 +134,11 @@ agent/
 ### Étape 2 — Séparer le cœur, le CLI et le module Python dans CMake
 
 - [ ] Créer une cible `bibliotheque_core` avec `book.cpp`, `user.cpp`, `library.cpp`, `filemanager.cpp`.
-- [ ] Garder l’exécutable `bibliotheque` avec seulement `main.cpp`.
-- [ ] Supprimer la logique de glob pour le CLI et le module Python.
-- [ ] Appliquer C++17 et `-Wall -Wextra -Wpedantic` à la cible cœur.
-- [ ] Ajouter une option CMake `BUILD_PYTHON_BINDINGS`, désactivée par défaut.
-- [ ] Éviter que `main.cpp` soit compilé dans le module et `bindings.cpp` dans le CLI.
+- [x] Garder l’exécutable `bibliotheque` avec seulement `main.cpp`.
+- [x] Supprimer la logique de glob pour le CLI et le module Python.
+- [x] Appliquer C++17 et `-Wall -Wextra -Wpedantic` à la cible cœur.
+- [x] Ajouter une option CMake `BUILD_PYTHON_BINDINGS`, désactivée par défaut.
+- [x] Éviter que `main.cpp` soit compilé dans le module et `bindings.cpp` dans le CLI.
 
 **Test** : `cmake -S agent -B agent/build && cmake --build agent/build`, puis exécution du CLI sur la copie de données.
 
