@@ -133,7 +133,7 @@ agent/
 
 ### Étape 2 — Séparer le cœur, le CLI et le module Python dans CMake
 
-- [ ] Créer une cible `bibliotheque_core` avec `book.cpp`, `user.cpp`, `library.cpp`, `filemanager.cpp`.
+- [x] Créer une cible `bibliotheque_core` avec `book.cpp`, `user.cpp`, `library.cpp`, `filemanager.cpp`.
 - [x] Garder l’exécutable `bibliotheque` avec seulement `main.cpp`.
 - [x] Supprimer la logique de glob pour le CLI et le module Python.
 - [x] Appliquer C++17 et `-Wall -Wextra -Wpedantic` à la cible cœur.
