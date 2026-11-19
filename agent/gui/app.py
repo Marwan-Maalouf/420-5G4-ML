@@ -1,6 +1,7 @@
 import customtkinter as ctk
 from tkinter import messagebox
 from gui.service import LibraryService, ServiceError
+from gui.views.books import BooksView
 
 
 class App(ctk.CTk):
@@ -27,25 +28,24 @@ class App(ctk.CTk):
         self.status.grid(row=1, column=0, columnspan=2, sticky="ew", padx=10)
 
         self.frames = {}
-        for name in ["Tableau de bord", "Livres", "Utilisateurs", "Statistiques"]:
-            frame = ctk.CTkFrame(self.content)
-            frame.grid(row=0, column=0, sticky="nsew")
-            ctk.CTkLabel(
-                frame, text=name, font=ctk.CTkFont(size=20, weight="bold")
-            ).pack(pady=20)
-            self.frames[name] = frame
-            ctk.CTkButton(
-                self.sidebar, text=name, command=lambda n=name: self.show_frame(n)
-            ).pack(padx=10, pady=5)
-        self.show_frame("Tableau de bord")
+        self.frames["Livres"] = BooksView(self.content, self)
+        self.frames["Livres"].grid(row=0, column=0, sticky="nsew")
+        ctk.CTkButton(self.sidebar, text="Livres",
+                      command=lambda: self.show_frame("Livres")
+                      ).pack(padx=10, pady=5)
+        self.show_frame("Livres")
 
     def show_frame(self, name):
         frame = self.frames[name]
+        if hasattr(frame, "refresh"):
+            frame.refresh()
         frame.tkraise()
         self.status.configure(
             text=f"Page actuelle : {name}", text_color=("gray14", "gray84")
         )
 
+    def show_books(self):
+        self.show_frame("Livres")
     def show_success(self, message):
         self.status.configure(text=message, text_color="green")
 

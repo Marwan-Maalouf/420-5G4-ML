@@ -209,14 +209,14 @@ agent/
 
 ### Étape 8 — Écran Livres
 
-- [ ] Afficher le tableau des livres avec `ttk.Treeview` dans un conteneur CTk.
-- [ ] Ajouter la recherche par titre/auteur.
-- [ ] Ajouter le filtre tous/disponibles/empruntés.
-- [ ] Ajouter le dialog d’ajout de livre.
-- [ ] Ajouter la confirmation de suppression.
-- [ ] Avertir avant de supprimer un livre emprunté.
-- [ ] Rafraîchir le tableau et les listes après chaque opération.
-- [ ] Afficher un état vide si la bibliothèque est vide.
+- [x] Afficher le tableau des livres avec `ttk.Treeview` dans un conteneur CTk.
+- [x] Ajouter la recherche par titre/auteur.
+- [x] Ajouter le filtre tous/disponibles/empruntés.
+- [x] Ajouter le dialog d’ajout de livre.
+- [x] Ajouter la confirmation de suppression.
+- [x] Avertir avant de supprimer un livre emprunté.
+- [x] Rafraîchir le tableau et les listes après chaque opération.
+- [x] Afficher un état vide si la bibliothèque est vide.
 
 **Test** : reproduire les anciennes options 1 à 6 du menu CLI.
 
