@@ -255,13 +255,13 @@ agent/
 
 ### Étape 12 — Validation finale et documentation
 
-- [ ] Rejouer le scénario de référence de l’étape 1 uniquement via la GUI.
-- [ ] Comparer les fichiers sauvegardés avec ceux du CLI.
-- [ ] Vérifier que le CLI reste fonctionnel.
-- [ ] Tester le lancement sans terminal et sans messages `stdout` visibles.
-- [ ] Documenter les commandes de build, de test et de lancement dans `agent/README.md`.
-- [ ] Documenter l’emplacement du module compilé et le `PYTHONPATH`.
-- [ ] Mettre à jour `AGENTS.md` si de nouvelles commandes ou dépendances sont ajoutées.
+- [x] Rejouer le scénario de référence de l’étape 1 uniquement via la GUI.
+- [x] Comparer les fichiers sauvegardés avec ceux du CLI.
+- [x] Vérifier que le CLI reste fonctionnel.
+- [x] Tester le lancement sans terminal et sans messages `stdout` visibles.
+- [x] Documenter les commandes de build, de test et de lancement dans `agent/README.md`.
+- [x] Documenter l’emplacement du module compilé et le `PYTHONPATH`.
+- [x] Mettre à jour `AGENTS.md` si de nouvelles commandes ou dépendances sont ajoutées.
 
 **Test** : checklist GUI couvrant les 14 anciennes options et scénario complet sauvegarde/rechargement.
 
