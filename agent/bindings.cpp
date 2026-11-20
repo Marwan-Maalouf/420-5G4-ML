@@ -83,6 +83,7 @@ PYBIND11_MODULE(bibliotheque_py, m) {
                  return books;
              })
         .def("add_user", &Library::addUser, py::arg("user"))
+        .def("remove_user", &Library::removeUser, py::arg("user_id"))
         .def("find_user_by_id",
              [](Library& library, const std::string& user_id) -> std::optional<User> {
                  User* user = library.findUserById(user_id);

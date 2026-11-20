@@ -2,6 +2,7 @@ import customtkinter as ctk
 from tkinter import messagebox
 from gui.service import LibraryService, ServiceError
 from gui.views.books import BooksView
+from gui.views.users import UsersView
 
 
 class App(ctk.CTk):
@@ -34,6 +35,11 @@ class App(ctk.CTk):
                       command=lambda: self.show_frame("Livres")
                       ).pack(padx=10, pady=5)
         self.show_frame("Livres")
+        self.frames["Utilisateurs"] = UsersView(self.content, self)
+        self.frames["Utilisateurs"].grid(row=0, column=0, sticky="nsew")
+        ctk.CTkButton(self.sidebar, text="Utilisateurs",
+                      command=lambda: self.show_frame("Utilisateurs")
+                      ).pack(padx=10, pady=5)
 
     def show_frame(self, name):
         frame = self.frames[name]

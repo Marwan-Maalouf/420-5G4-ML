@@ -107,6 +107,21 @@ class LibraryService:
             raise ServiceError(f"Un utilisateur avec l'ID {user_id} existe déjà.")
         self._library.add_user(User(name, user_id))
 
+    def remove_user(self, user_id: str):
+        """Supprime un utilisateur de la bibliothèque."""
+        user_id = user_id.strip()
+        if not user_id:
+            raise ValidationError("L'ID utilisateur est requis.")
+        user = self._library.find_user_by_id(user_id)
+        if user is None:
+            raise ServiceError(f"L'utilisateur avec l'ID {user_id} n'existe pas.")
+        if user.borrowed_count > 0:
+            raise ServiceError(
+                f"L'utilisateur {user_id} doit d'abord rendre ses livres empruntés."
+            )
+        if not self._library.remove_user(user_id):
+            raise ServiceError(f"Impossible de supprimer l'utilisateur {user_id}.")
+
     def check_out_book(self, isbn: str, user_id: str):
         """Permet à un utilisateur d'emprunter un livre."""
         isbn, user_id = isbn.strip(), user_id.strip()
