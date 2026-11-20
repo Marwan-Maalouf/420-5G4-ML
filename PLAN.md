@@ -242,14 +242,14 @@ agent/
 
 ### Étape 11 — Statistiques, données et sortie
 
-- [ ] Alimenter le tableau de bord et l’écran statistiques avec les compteurs C++.
-- [ ] Afficher le dossier de données utilisé.
-- [ ] Ajouter les boutons recharger, sauvegarder et créer un backup.
-- [ ] Gérer le changement de dossier de données en recréant le service.
-- [ ] Rafraîchir toutes les vues après un rechargement.
-- [ ] Gérer l’échec de sauvegarde à la fermeture.
-- [ ] Rendre le backup idempotent (écrasement ou horodatage).
-- [ ] Afficher un message clair en cas de backup impossible.
+- [x] Alimenter le tableau de bord et l’écran statistiques avec les compteurs C++.
+- [x] Afficher le dossier de données utilisé.
+- [x] Ajouter les boutons recharger, sauvegarder et créer un backup.
+- [x] Gérer le changement de dossier de données en recréant le service.
+- [x] Rafraîchir toutes les vues après un rechargement.
+- [x] Gérer l’échec de sauvegarde à la fermeture.
+- [x] Rendre le backup idempotent (écrasement ou horodatage).
+- [x] Afficher un message clair en cas de backup impossible.
 
 **Test** : reproduire les options 11, 12, 13 et 0 ; vérifier deux backups successifs.
 
