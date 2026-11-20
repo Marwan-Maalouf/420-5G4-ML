@@ -222,21 +222,21 @@ agent/
 
 ### Étape 9 — Écran Utilisateurs
 
-- [ ] Afficher le tableau des utilisateurs et leurs emprunts.
-- [ ] Ajouter le dialog d’ajout d’utilisateur.
-- [ ] Contrôler les doublons d’ID.
-- [ ] Rafraîchir après ajout.
-- [ ] Afficher un état vide si aucun utilisateur.
+- [x] Afficher le tableau des utilisateurs et leurs emprunts.
+- [x] Ajouter le dialog d’ajout d’utilisateur.
+- [x] Contrôler les doublons d’ID.
+- [x] Rafraîchir après ajout.
+- [x] Afficher un état vide si aucun utilisateur.
 
 **Test** : reproduire les anciennes options 7 et 8.
 
 ### Étape 10 — Écran Emprunts
 
-- [ ] Ajouter le formulaire d’emprunt avec livres disponibles et utilisateurs.
-- [ ] Ajouter le formulaire de retour avec livres empruntés.
-- [ ] Désactiver les actions sans sélection.
-- [ ] Rafraîchir les listes après emprunt/retour.
-- [ ] Afficher les erreurs : livre indisponible, utilisateur inconnu, livre non emprunté.
+- [x] Ajouter le formulaire d’emprunt avec livres disponibles et utilisateurs.
+- [x] Ajouter le formulaire de retour avec livres empruntés.
+- [x] Désactiver les actions sans sélection.
+- [x] Rafraîchir les listes après emprunt/retour.
+- [x] Afficher les erreurs : livre indisponible, utilisateur inconnu, livre non emprunté.
 
 **Test** : reproduire les anciennes options 9 et 10, puis vérifier les fichiers après sauvegarde.
 

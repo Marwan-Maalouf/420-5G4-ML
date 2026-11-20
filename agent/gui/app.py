@@ -3,6 +3,7 @@ from tkinter import messagebox
 from gui.service import LibraryService, ServiceError
 from gui.views.books import BooksView
 from gui.views.users import UsersView
+from gui.views.borrows import BorrowsView
 
 
 class App(ctk.CTk):
@@ -29,17 +30,20 @@ class App(ctk.CTk):
         self.status.grid(row=1, column=0, columnspan=2, sticky="ew", padx=10)
 
         self.frames = {}
-        self.frames["Livres"] = BooksView(self.content, self)
-        self.frames["Livres"].grid(row=0, column=0, sticky="nsew")
-        ctk.CTkButton(self.sidebar, text="Livres",
-                      command=lambda: self.show_frame("Livres")
-                      ).pack(padx=10, pady=5)
+        for name, view_class in (
+            ("Livres", BooksView),
+            ("Utilisateurs", UsersView),
+            ("Emprunts", BorrowsView),
+        ):
+            frame = view_class(self.content, self)
+            frame.grid(row=0, column=0, sticky="nsew")
+            self.frames[name] = frame
+            ctk.CTkButton(
+                self.sidebar,
+                text=name,
+                command=lambda n=name: self.show_frame(n),
+            ).pack(padx=10, pady=5)
         self.show_frame("Livres")
-        self.frames["Utilisateurs"] = UsersView(self.content, self)
-        self.frames["Utilisateurs"].grid(row=0, column=0, sticky="nsew")
-        ctk.CTkButton(self.sidebar, text="Utilisateurs",
-                      command=lambda: self.show_frame("Utilisateurs")
-                      ).pack(padx=10, pady=5)
 
     def show_frame(self, name):
         frame = self.frames[name]
